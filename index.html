@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Your 50% Offer</title>
 
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #7b1e2b;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: #ffffff;
+        color: #333;
+        max-width: 400px;
+        width: 90%;
+        border-radius: 12px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .header {
+        background: #b21f2d;
+        color: white;
+        padding: 20px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .offer {
+        padding: 20px;
+    }
+
+    .offer h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #b21f2d;
+    }
+
+    .offer p {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .highlight {
+        background: #ffcc00;
+        color: #b21f2d;
+        padding: 8px;
+        font-weight: bold;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    input {
+        width: 85%;
+        padding: 12px;
+        margin-top: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 15px;
+        width: 90%;
+        padding: 12px;
+        background: #b21f2d;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #8e1823;
+    }
+
+    .small {
+        font-size: 10px;
+        color: #777;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">COSTA</div>
+
+    <div class="offer">
+        <h1>50% OFF</h1>
+        <p>All hot & chilled drinks</p>
+
+        <div class="highlight">
+            Today only – while stocks last<br>
+            At the Clear Water Cafe
+        </div>
+
+        <p>Enter your email to receive your voucher:</p>
+
+        <form onsubmit="handleSubmit(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Get My Voucher</button>
+        </form>
+
+        <div class="small">
+            *Valid today only. Not combinable with other offers.
+        </div>
+    </div>
+
+</div>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // Redirect to reveal page (no data stored)
+    document.body.innerHTML = `
+        <div style="text-align:center; padding:40px; font-family:Arial;">
+            <h1>Gotcha 🙂</h1>
+            <p>This was a cyber security awareness demo.</p>
+            <p><strong>No data has been collected.</strong></p>
+
+            <h3>Why this worked:</h3>
+            <p>
+                ✔ Trusted brand<br>
+                ✔ Urgency (“today only”)<br>
+                ✔ QR code → bypassed usual checks<br>
+                ✔ Small reward incentive
+            </p>
+
+            <h3>In real life:</h3>
+            <p>
+                ➤ Pause before acting<br>
+                ➤ Check the source<br>
+                ➤ Don’t enter details from QR links you don’t trust
+            </p>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
